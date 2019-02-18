@@ -3,7 +3,12 @@ import { ListView, StyleSheet, AsyncStorage } from 'react-native';
 import ColorButton from './ColorButton'
 import ColorForm from './ColorForm'
 
+// import { StackNavigator } from 'react-navigation'
+
 export default class ColorList extends React.Component {
+  static navigationOptions = {
+    title: 'Available Colors'
+  }
   constructor() {
     super();
 
@@ -57,16 +62,19 @@ export default class ColorList extends React.Component {
   }
 
   render() {
+    const { navigate } = this.props.navigation
     const { backgroundColor, dataSource } = this.state;
     return (
       <ListView style={[styles.container, { backgroundColor }]}
         dataSource={dataSource}
         renderRow={color => (
           <ColorButton backgroundColor={color}
-            onSelect={this.props.onColorSelected} />
+            onSelect={() => navigate('Details', { color })} />
         )}
         renderHeader={() => (
-          <ColorForm onNewColor={this.newColor} />
+          <ColorForm onNewColor={this.newColor} 
+            navigation={this.props.navigation}
+          />
         )}
       >
         

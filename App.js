@@ -1,21 +1,10 @@
 import React from 'react';
-import { AppRegistry, StyleSheet, View, Alert } from 'react-native';
-import ColorList from './components/ColorList'
+import { AppRegistry } from 'react-native';
+import AppNavigator from './AppNavigator'
+// import Products from './components/products/Products'
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <ColorList onColorSelected={color => Alert.alert(color)}/>
-      </View>
-    );
-  }
-}
+const App = () => <AppNavigator />
 
-const styles = StyleSheet.create({
-  container: {
-    flex:1,
-  }
-})
+export default App
 
 AppRegistry.registerComponent('App', () => App);
