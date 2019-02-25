@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "tutorial",
-    "slug": "tutorial",
+    "name": "Color List",
+    "slug": "color-list",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
@@ -24,6 +24,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "A react-native project used to implement the basic components of RN",
+    "githubUrl": "https://github.com/emaitee/color-list"
   }
 }

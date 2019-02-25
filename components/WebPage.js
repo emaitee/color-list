@@ -20,3 +20,7 @@ const styles = StyleSheet.create({
 });
 
 export default WebPage;
+
+const Contact = () => (
+  <WebPage  />
+)

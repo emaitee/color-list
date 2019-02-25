@@ -32,10 +32,12 @@ export default class ColorList extends React.Component {
           console.error('Error loading colors', err) 
         } else {
           const availableColors = JSON.parse(data)
-          this.setState({
-            availableColors,
-            dataSource: this.ds.cloneWithRows(availableColors)
-          })
+          if(availableColors){
+            this.setState({
+              availableColors,
+              dataSource: this.ds.cloneWithRows(availableColors)
+            })
+          }
         }
       }
     )
