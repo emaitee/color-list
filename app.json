@@ -10,7 +10,7 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/color-list.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -19,12 +19,17 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.issatoyin.colorList"
+    },
+    "android": {
+      "package": "com.issatoyin.colorList"
+    },
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
-    },
+
     "description": "A react-native project used to implement the basic components of RN",
     "githubUrl": "https://github.com/emaitee/color-list"
   }
